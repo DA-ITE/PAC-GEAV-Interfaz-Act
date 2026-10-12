@@ -165,7 +165,6 @@
 
 /* =========================================================
    DATOS DEL CURSO
-   COMPACTO Y EN UNA SOLA LÍNEA EN CANVAS
 ========================================================= */
 
 #sise-andragogia-home .sise-stats-wrap{
@@ -187,11 +186,6 @@
   border-radius:13px;
   background:linear-gradient(135deg,#211D1F 0%,#2A2226 100%);
   box-shadow:0 12px 26px rgba(35,31,32,.14);
-}
-
-#sise-andragogia-home .sise-stats tbody,
-#sise-andragogia-home .sise-stats tr{
-  width:100%;
 }
 
 #sise-andragogia-home .sise-stats td{
@@ -512,17 +506,15 @@
 #sise-andragogia-home .sise-module-card{
   position:relative;
   overflow:hidden;
-  min-height:245px;
-  padding:27px;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:17px;
+  display:flex;
+  min-height:250px;
+  flex-direction:column;
+  padding:26px;
+  border-radius:16px;
   color:#FFFFFF;
   background:
-    radial-gradient(circle at 100% 0,rgba(255,0,80,.2),transparent 40%),
-    linear-gradient(145deg,#1D1A1C 0%,#2B2528 100%);
-  box-shadow:0 14px 28px rgba(35,31,32,.14);
-  display:flex;
-  flex-direction:column;
+    radial-gradient(circle at 100% 0,rgba(255,0,80,.2),transparent 38%),
+    linear-gradient(135deg,#211D1F,#331521);
 }
 
 #sise-andragogia-home .sise-module-card:after{
@@ -530,41 +522,39 @@
   position:absolute;
   width:150px;
   height:150px;
-  right:-65px;
-  bottom:-65px;
-  border:1px solid rgba(255,0,80,.28);
+  right:-70px;
+  top:-70px;
+  border:1px solid rgba(255,255,255,.12);
   border-radius:50%;
 }
 
 #sise-andragogia-home .sise-module-top{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:20px;
   position:relative;
   z-index:2;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:19px;
 }
 
 #sise-andragogia-home .sise-module-number{
   display:flex;
   align-items:center;
   justify-content:center;
-  width:50px;
-  height:50px;
-  flex:0 0 50px;
+  width:38px;
+  height:38px;
   border-radius:50%;
+  background:var(--pink);
   color:#FFFFFF;
-  background:linear-gradient(135deg,#FF0050,#FF477C);
-  font-size:20px;
+  font-size:14px;
   font-weight:900;
-  box-shadow:0 0 0 6px rgba(255,0,80,.11);
 }
 
 #sise-andragogia-home .sise-module-label{
-  color:#FF6D9B;
+  color:#FF91B3;
   font-size:12px;
-  font-weight:800;
-  letter-spacing:1.3px;
+  font-weight:900;
+  letter-spacing:1.1px;
   text-transform:uppercase;
 }
 
@@ -573,33 +563,32 @@
   z-index:2;
   margin:0 0 12px;
   color:#FFFFFF;
-  font-size:25px;
-  line-height:1.25;
+  font-size:22px;
+  line-height:1.3;
 }
 
 #sise-andragogia-home .sise-module-help{
   position:relative;
   z-index:2;
-  margin:0 0 20px;
-  color:rgba(255,255,255,.68);
-  font-size:13px;
-  line-height:1.5;
+  margin:0 0 22px;
+  color:rgba(255,255,255,.7);
+  font-size:14px;
 }
 
 #sise-andragogia-home .sise-module-btn{
   position:relative;
   z-index:2;
   display:inline-flex;
+  width:max-content;
   align-items:center;
   justify-content:center;
-  align-self:flex-start;
   margin-top:auto;
-  padding:12px 19px;
+  padding:13px 20px;
   border-radius:9px;
   color:#FFFFFF;
   background:var(--pink);
   text-decoration:none;
-  font-size:14px;
+  font-size:15px;
   font-weight:700;
 }
 
@@ -743,65 +732,79 @@
 
 
 /* =========================================================
-   COEVALUACIÓN
+   COEVALUACIÓN PRÁCTICA OPCIONAL
 ========================================================= */
 
-#sise-andragogia-home .sise-coeval-card{
-  display:flex;
-  flex-direction:column;
-}
-
-#sise-andragogia-home .sise-coeval-intro{
-  margin-bottom:13px !important;
-}
-
-#sise-andragogia-home .sise-coeval-flow{
-  display:flex;
-  align-items:stretch;
-  gap:5px;
-  margin:5px 0 16px;
-}
-
-#sise-andragogia-home .sise-coeval-step{
-  flex:1;
-  min-width:0;
-  padding:9px 5px;
+#sise-andragogia-home .sise-optional-card{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:58px 1fr;
+  gap:18px;
+  align-items:start;
+  min-height:auto;
+  margin-top:5px;
+  padding:24px 25px;
   border:1px solid #F1D5DE;
-  border-radius:8px;
-  background:#FFF4F7;
-  text-align:center;
+  border-left:6px solid var(--pink);
+  border-top:1px solid #F1D5DE;
+  background:linear-gradient(105deg,#FFF1F5 0%,#FFFFFF 78%);
+  box-shadow:none;
 }
 
-#sise-andragogia-home .sise-coeval-step strong{
-  display:block;
-  margin-bottom:3px;
+#sise-andragogia-home .sise-optional-card .sise-evaluation-icon{
+  margin:0;
+}
+
+#sise-andragogia-home .sise-optional-content{
+  min-width:0;
+}
+
+#sise-andragogia-home .sise-optional-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-bottom:8px;
+  padding:5px 10px;
+  border-radius:999px;
   color:var(--pink);
+  background:#FFFFFF;
+  border:1px solid #F0CFDA;
   font-size:11px;
   font-weight:900;
+  letter-spacing:.7px;
+  text-transform:uppercase;
 }
 
-#sise-andragogia-home .sise-coeval-step span{
-  display:block;
-  color:#4D4548;
-  font-size:10px;
-  line-height:1.2;
-  font-weight:700;
+#sise-andragogia-home .sise-optional-card h3{
+  margin-bottom:8px;
+  font-size:21px;
 }
 
-#sise-andragogia-home .sise-coeval-arrow{
+#sise-andragogia-home .sise-optional-card p{
+  max-width:850px;
+  font-size:14px;
+  line-height:1.6;
+}
+
+#sise-andragogia-home .sise-optional-actions{
   display:flex;
   align-items:center;
-  justify-content:center;
-  flex:0 0 12px;
-  color:var(--pink);
-  font-size:18px;
-  font-weight:900;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+#sise-andragogia-home .sise-optional-note{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:7px;
+  color:#FFFFFF;
+  background:#231F20;
+  font-size:12px;
+  font-weight:800;
 }
 
 #sise-andragogia-home .sise-coeval-manual-btn{
-  width:100%;
-  margin-top:auto;
-  padding:11px 13px;
+  padding:11px 16px;
   border:0;
   border-radius:8px;
   color:#FFFFFF;
@@ -1010,8 +1013,7 @@
 
 
 /* =========================================================
-   RESPONSIVE CANVAS / TABLET
-   SE MANTIENE EN UNA SOLA FILA
+   RESPONSIVE
 ========================================================= */
 
 @media screen and (max-width:900px){
@@ -1027,46 +1029,6 @@
     table-layout:fixed;
   }
 
-  #sise-andragogia-home .sise-stats tbody{
-    display:table-row-group;
-  }
-
-  #sise-andragogia-home .sise-stats tr{
-    display:table-row;
-  }
-
-  #sise-andragogia-home .sise-stats td{
-    display:table-cell;
-    width:20%;
-    padding:10px 4px;
-    border-right:1px solid rgba(255,255,255,.10);
-    border-bottom:none;
-  }
-
-  #sise-andragogia-home .sise-stats td:last-child{
-    border-right:none;
-  }
-
-  #sise-andragogia-home .sise-stat-icon{
-    width:30px;
-    height:30px;
-    margin-bottom:6px;
-  }
-
-  #sise-andragogia-home .sise-stat-icon svg{
-    width:15px;
-    height:15px;
-  }
-
-  #sise-andragogia-home .sise-stat-value{
-    font-size:14px;
-  }
-
-  #sise-andragogia-home .sise-stat-label{
-    max-width:110px;
-    font-size:9.5px;
-  }
-
   #sise-andragogia-home .sise-modules-grid{
     grid-template-columns:1fr;
   }
@@ -1078,12 +1040,12 @@
   #sise-andragogia-home .sise-evaluation-card{
     min-height:auto;
   }
+
+  #sise-andragogia-home .sise-optional-card{
+    grid-column:auto;
+  }
 }
 
-
-/* =========================================================
-   MÓVIL
-========================================================= */
 
 @media screen and (max-width:540px){
 
@@ -1144,14 +1106,6 @@
     border-bottom:none;
   }
 
-  #sise-andragogia-home .sise-stat-value{
-    font-size:15px;
-  }
-
-  #sise-andragogia-home .sise-stat-label{
-    font-size:10px;
-  }
-
   #sise-andragogia-home .sise-navigation{
     grid-template-columns:1fr;
   }
@@ -1196,14 +1150,17 @@
     margin:0 auto 20px;
   }
 
-  #sise-andragogia-home .sise-coeval-flow{
-    display:grid;
+  #sise-andragogia-home .sise-optional-card{
     grid-template-columns:1fr;
   }
 
-  #sise-andragogia-home .sise-coeval-arrow{
-    transform:rotate(90deg);
-    min-height:12px;
+  #sise-andragogia-home .sise-optional-actions{
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  #sise-andragogia-home .sise-coeval-manual-btn{
+    width:100%;
   }
 
   #sise-andragogia-home .sise-coeval-modal{
@@ -1217,388 +1174,722 @@
   }
 }
 </style>
+
+
 <!-- =========================================================
      PORTADA
 ========================================================= -->
+
 <div class="sise-hero">
-<div class="sise-dot-pattern"></div>
-<div class="sise-container">
-<div class="sise-hero-content">
-<div class="sise-eyebrow">
-<span class="sise-eyebrow-dot"></span>
+  <div class="sise-dot-pattern"></div>
+
+  <div class="sise-container">
+    <div class="sise-hero-content">
+
+      <div class="sise-eyebrow">
+        <span class="sise-eyebrow-dot"></span>
         Programa de formación docente
       </div>
-<h1><span class="sise-highlight">Retroalimentación inteligente</span><br/> en entornos digitales</h1>
-<p class="sise-hero-description">Diseña e implementa estrategias de retroalimentación oportuna, personalizada, accionable y basada en evidencia para mejorar la experiencia formativa y fortalecer la permanencia estudiantil en entornos virtuales.</p>
-<a class="sise-btn-primary" href="https://aulad.educad.pe/courses/535/modules">
-        Iniciar recorrido  →
+
+      <h1>
+        <span class="sise-highlight">Retroalimentación inteligente</span><br>
+        en entornos digitales
+      </h1>
+
+      <p class="sise-hero-description">
+        Diseña e implementa estrategias de retroalimentación oportuna,
+        personalizada, accionable y basada en evidencia para mejorar la
+        experiencia formativa y fortalecer la permanencia estudiantil
+        en entornos virtuales.
+      </p>
+
+      <a class="sise-btn-primary"
+         href="https://aulad.educad.pe/courses/535/modules">
+        Iniciar recorrido&nbsp; →
       </a>
+
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
+
 <!-- =========================================================
      DATOS DEL CURSO
 ========================================================= -->
+
 <div class="sise-stats-wrap">
-<table class="sise-stats">
-<tbody>
-<tr>
-<!-- MÓDULOS -->
-<td>
-<div class="sise-stat-icon">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
-<polyline points="2 12 12 17 22 12"></polyline>
-<polyline points="2 17 12 22 22 17"></polyline>
-</svg>
-</div>
-<div class="sise-stat-value">Módulos</div>
-<p class="sise-stat-label">Retroalimentación y seguimiento</p>
-</td>
-<!-- NIVEL -->
-<td>
-<div class="sise-stat-icon">
-            ★
+
+  <table class="sise-stats">
+    <tbody>
+      <tr>
+
+        <td>
+          <div class="sise-stat-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+              <polyline points="2 12 12 17 22 12"></polyline>
+              <polyline points="2 17 12 22 22 17"></polyline>
+            </svg>
           </div>
-<div class="sise-stat-value">Intermedio</div>
-<p class="sise-stat-label">Nivel del curso</p>
-</td>
-<!-- DURACIÓN -->
-<td>
-<div class="sise-stat-icon">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<circle cx="12" cy="12" r="9"></circle>
-<path d="M12 7v5l3.5 2"></path>
-</svg>
-</div>
-<div class="sise-stat-value">4 horas</div>
-<p class="sise-stat-label">Duración del contenido</p>
-</td>
-<!-- PLAZO -->
-<td>
-<div class="sise-stat-icon">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<rect height="16" rx="2" width="18" x="3" y="5"></rect>
-<path d="M8 3v4"></path>
-<path d="M16 3v4"></path>
-<path d="M3 10h18"></path>
-<path d="M8 14h2"></path>
-<path d="M14 14h2"></path>
-<path d="M8 17h2"></path>
-<path d="M14 17h2"></path>
-</svg>
-</div>
-<div class="sise-stat-value">2 meses</div>
-<p class="sise-stat-label">Plazo para completarlo</p>
-</td>
-<!-- CERTIFICACIÓN -->
-<td>
-<div class="sise-stat-icon">
-            ✓
+
+          <div class="sise-stat-value">Módulos</div>
+          <p class="sise-stat-label">Retroalimentación y seguimiento</p>
+        </td>
+
+
+        <td>
+          <div class="sise-stat-icon">★</div>
+          <div class="sise-stat-value">Intermedio</div>
+          <p class="sise-stat-label">Nivel del curso</p>
+        </td>
+
+
+        <td>
+          <div class="sise-stat-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 7v5l3.5 2"></path>
+            </svg>
           </div>
-<div class="sise-stat-value">Certificación</div>
-<p class="sise-stat-label">Nota mínima aprobatoria: 17</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+          <div class="sise-stat-value">4 horas</div>
+          <p class="sise-stat-label">Duración del contenido</p>
+        </td>
+
+
+        <td>
+          <div class="sise-stat-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect height="16" rx="2" width="18" x="3" y="5"></rect>
+              <path d="M8 3v4"></path>
+              <path d="M16 3v4"></path>
+              <path d="M3 10h18"></path>
+              <path d="M8 14h2"></path>
+              <path d="M14 14h2"></path>
+              <path d="M8 17h2"></path>
+              <path d="M14 17h2"></path>
+            </svg>
+          </div>
+
+          <div class="sise-stat-value">2 meses</div>
+          <p class="sise-stat-label">Plazo para completarlo</p>
+        </td>
+
+
+        <td>
+          <div class="sise-stat-icon">✓</div>
+          <div class="sise-stat-value">Certificación</div>
+          <p class="sise-stat-label">Nota mínima aprobatoria: 17</p>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+
 <!-- =========================================================
-     NAVEGACIÓN
+     CONTENIDO
 ========================================================= -->
+
 <div class="sise-container" id="sise-contenido-dinamico">
-<div class="sise-intro">
-<p>
-<strong>Instrucción:</strong>
+
+  <div class="sise-intro">
+    <p>
+      <strong>Instrucción:</strong>
       selecciona uno de los botones para consultar la información.
       El contenido se mostrará en una única caja dinámica.
     </p>
-</div>
-<div aria-label="Secciones del curso" class="sise-navigation" role="tablist">
-<button aria-selected="true" class="sise-nav-button active" data-section="sobre-curso" role="tab" type="button">
-<span class="sise-nav-icon">i</span>
+  </div>
+
+
+  <!-- NAVEGACIÓN -->
+
+  <div
+    aria-label="Secciones del curso"
+    class="sise-navigation"
+    role="tablist">
+
+    <button
+      aria-selected="true"
+      class="sise-nav-button active"
+      data-section="sobre-curso"
+      role="tab"
+      type="button">
+
+      <span class="sise-nav-icon">i</span>
       Sobre el curso
-
     </button>
-<button aria-selected="false" class="sise-nav-button" data-section="modulos" role="tab" type="button">
-<span class="sise-nav-icon">☰</span>
+
+
+    <button
+      aria-selected="false"
+      class="sise-nav-button"
+      data-section="modulos"
+      role="tab"
+      type="button">
+
+      <span class="sise-nav-icon">☰</span>
       Módulos
-
     </button>
-<button aria-selected="false" class="sise-nav-button" data-section="evaluacion" role="tab" type="button">
-<span class="sise-nav-icon">✓</span>
+
+
+    <button
+      aria-selected="false"
+      class="sise-nav-button"
+      data-section="evaluacion"
+      role="tab"
+      type="button">
+
+      <span class="sise-nav-icon">✓</span>
       Evaluación
-
     </button>
-</div>
-<!-- =====================================================
-       CAJA DINÁMICA INICIAL
-  ====================================================== -->
-<section aria-atomic="true" aria-live="polite" class="sise-dynamic-box">
-<div class="sise-dynamic-header">
-<span class="sise-dynamic-kicker" id="sise-dynamic-kicker">
+
+  </div>
+
+
+  <!-- CAJA DINÁMICA -->
+
+  <section
+    aria-atomic="true"
+    aria-live="polite"
+    class="sise-dynamic-box">
+
+    <div class="sise-dynamic-header">
+
+      <span
+        class="sise-dynamic-kicker"
+        id="sise-dynamic-kicker">
         Información general
       </span>
-<h2 class="sise-dynamic-title" id="sise-dynamic-title">
+
+      <h2
+        class="sise-dynamic-title"
+        id="sise-dynamic-title">
         Conoce el propósito del curso
       </h2>
-</div>
-<div class="sise-dynamic-body" id="sise-dynamic-body">
-<h3 class="sise-section-title">
-<span class="sise-title-number">01</span>
+
+    </div>
+
+
+    <div
+      class="sise-dynamic-body"
+      id="sise-dynamic-body">
+
+      <h3 class="sise-section-title">
+        <span class="sise-title-number">01</span>
         Descripción del curso
       </h3>
-<p>El curso es de naturaleza teórico-práctica y fortalece el acompañamiento académico, la investigación aplicada y la innovación educativa en contextos virtuales mediante estrategias de retroalimentación oportuna, personalizada, accionable y basada en evidencia, así como intervenciones de seguimiento académico.</p>
-<h3 class="sise-section-title">
-<span class="sise-title-number">02</span>
+
+      <p>
+        El curso es de naturaleza teórico-práctica y fortalece el
+        acompañamiento académico, la investigación aplicada y la innovación
+        educativa en contextos virtuales mediante estrategias de
+        retroalimentación oportuna, personalizada, accionable y basada en
+        evidencia, así como intervenciones de seguimiento académico.
+      </p>
+
+
+      <h3 class="sise-section-title">
+        <span class="sise-title-number">02</span>
         ¿A quiénes está dirigido?
       </h3>
-<div class="sise-audience-card">
-<p><strong>Docentes participantes del PAC Docente</strong> que desarrollan su formación y práctica educativa en modalidad online.</p>
-</div>
-<h3 class="sise-section-title">
-<span class="sise-title-number">03</span>
+
+      <div class="sise-audience-card">
+        <p>
+          <strong>Docentes participantes del PAC Docente</strong>
+          que desarrollan su formación y práctica educativa
+          en modalidad online.
+        </p>
+      </div>
+
+
+      <h3 class="sise-section-title">
+        <span class="sise-title-number">03</span>
         Logro del curso
       </h3>
-<div class="sise-goal-card">
-<p>Transformar procesos de acompañamiento académico mediante estrategias de retroalimentación inteligente, personalizada y oportuna, integrando el análisis de evidencias de aprendizaje en entornos digitales para fortalecer la permanencia, motivación y desempeño estudiantil con criterios de excelencia educativa.</p>
-</div>
-<h3 class="sise-section-title">
-<span class="sise-title-number">04</span>
+
+      <div class="sise-goal-card">
+        <p>
+          Transformar procesos de acompañamiento académico mediante
+          estrategias de retroalimentación inteligente, personalizada
+          y oportuna, integrando el análisis de evidencias de aprendizaje
+          en entornos digitales para fortalecer la permanencia, motivación
+          y desempeño estudiantil con criterios de excelencia educativa.
+        </p>
+      </div>
+
+
+      <h3 class="sise-section-title">
+        <span class="sise-title-number">04</span>
         Competencia a desarrollar
       </h3>
-<div class="sise-competence">
-<strong>C6 · Investigación e Innovación</strong>
-<p>Habilidad para buscar, analizar e interpretar información de diversas fuentes, diseñar y aplicar metodologías de investigación y evaluación auténtica, y generar propuestas innovadoras para mejorar los procesos de enseñanza-aprendizaje mediante la toma de decisiones basadas en evidencia.</p>
-</div>
-</div>
-</section>
-<!-- =====================================================
+
+      <div class="sise-competence">
+        <strong>C6 · Investigación e Innovación</strong>
+
+        <p>
+          Habilidad para buscar, analizar e interpretar información
+          de diversas fuentes, diseñar y aplicar metodologías de
+          investigación y evaluación auténtica, y generar propuestas
+          innovadoras para mejorar los procesos de enseñanza-aprendizaje
+          mediante la toma de decisiones basadas en evidencia.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
        SOBRE EL CURSO
   ====================================================== -->
-<div class="sise-template" data-kicker="Información general" data-title="Conoce el propósito del curso" id="sise-template-sobre-curso">
-<h3 class="sise-section-title">
-<span class="sise-title-number">01</span>
+
+  <div
+    class="sise-template"
+    data-kicker="Información general"
+    data-title="Conoce el propósito del curso"
+    id="sise-template-sobre-curso">
+
+    <h3 class="sise-section-title">
+      <span class="sise-title-number">01</span>
       Descripción del curso
     </h3>
-<p>El curso es de naturaleza teórico-práctica y fortalece el acompañamiento académico, la investigación aplicada y la innovación educativa en contextos virtuales mediante estrategias de retroalimentación oportuna, personalizada, accionable y basada en evidencia, así como intervenciones de seguimiento académico.</p>
-<h3 class="sise-section-title">
-<span class="sise-title-number">02</span>
+
+    <p>
+      El curso es de naturaleza teórico-práctica y fortalece el
+      acompañamiento académico, la investigación aplicada y la innovación
+      educativa en contextos virtuales mediante estrategias de
+      retroalimentación oportuna, personalizada, accionable y basada en
+      evidencia, así como intervenciones de seguimiento académico.
+    </p>
+
+
+    <h3 class="sise-section-title">
+      <span class="sise-title-number">02</span>
       ¿A quiénes está dirigido?
     </h3>
-<div class="sise-audience-card">
-<p><strong>Docentes participantes del PAC Docente</strong> que desarrollan su formación y práctica educativa en modalidad online.</p>
-</div>
-<h3 class="sise-section-title">
-<span class="sise-title-number">03</span>
+
+    <div class="sise-audience-card">
+      <p>
+        <strong>Docentes participantes del PAC Docente</strong>
+        que desarrollan su formación y práctica educativa
+        en modalidad online.
+      </p>
+    </div>
+
+
+    <h3 class="sise-section-title">
+      <span class="sise-title-number">03</span>
       Logro del curso
     </h3>
-<div class="sise-goal-card">
-<p>Transformar procesos de acompañamiento académico mediante estrategias de retroalimentación inteligente, personalizada y oportuna, integrando el análisis de evidencias de aprendizaje en entornos digitales para fortalecer la permanencia, motivación y desempeño estudiantil con criterios de excelencia educativa.</p>
-</div>
-<h3 class="sise-section-title">
-<span class="sise-title-number">04</span>
+
+    <div class="sise-goal-card">
+      <p>
+        Transformar procesos de acompañamiento académico mediante
+        estrategias de retroalimentación inteligente, personalizada
+        y oportuna, integrando el análisis de evidencias de aprendizaje
+        en entornos digitales para fortalecer la permanencia, motivación
+        y desempeño estudiantil con criterios de excelencia educativa.
+      </p>
+    </div>
+
+
+    <h3 class="sise-section-title">
+      <span class="sise-title-number">04</span>
       Competencia a desarrollar
     </h3>
-<div class="sise-competence">
-<strong>C6 · Investigación e Innovación</strong>
-<p>Habilidad para buscar, analizar e interpretar información de diversas fuentes, diseñar y aplicar metodologías de investigación y evaluación auténtica, y generar propuestas innovadoras para mejorar los procesos de enseñanza-aprendizaje mediante la toma de decisiones basadas en evidencia.</p>
-</div>
-</div>
-<!-- =====================================================
+
+    <div class="sise-competence">
+      <strong>C6 · Investigación e Innovación</strong>
+
+      <p>
+        Habilidad para buscar, analizar e interpretar información
+        de diversas fuentes, diseñar y aplicar metodologías de
+        investigación y evaluación auténtica, y generar propuestas
+        innovadoras para mejorar los procesos de enseñanza-aprendizaje
+        mediante la toma de decisiones basadas en evidencia.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
        MÓDULOS
   ====================================================== -->
-<div class="sise-template" data-kicker="Ruta de aprendizaje" data-title="Ingresa a tus módulos" id="sise-template-modulos">
-<p>Selecciona el módulo que deseas revisar y da clic en el botón correspondiente para iniciar tu recorrido de aprendizaje.</p>
-<div class="sise-modules-grid">
-<article class="sise-module-card">
-<div class="sise-module-top">
-<div class="sise-module-number">
-            1
-          </div>
-<div class="sise-module-label">
-            Módulo 1
-          </div>
-</div>
-<h3>Fundamentos de la retroalimentación efectiva y acompañamiento digital</h3>
-<p class="sise-module-help">Da clic para iniciar el módulo.</p>
-<a class="sise-module-btn" href="https://aulad.educad.pe/courses/535/pages/introduccion-al-modulo-1?module_item_id=5921">Iniciar módulo 1  →</a>
-</article>
-<article class="sise-module-card">
-<div class="sise-module-top">
-<div class="sise-module-number">
-            2
-          </div>
-<div class="sise-module-label">
-            Módulo 2
-          </div>
-</div>
-<h3>Seguimiento académico y retroalimentación continua</h3>
-<p class="sise-module-help">Da clic para iniciar el módulo.</p>
-<a class="sise-module-btn" href="https://aulad.educad.pe/courses/535/pages/introduccion-al-modulo-2?module_item_id=5922">Iniciar módulo 2  →</a>
-</article>
-</div>
-<!-- SÍLABO -->
-<div class="sise-syllabus-card">
-<div class="sise-syllabus-info">
-<span class="sise-syllabus-label">
+
+  <div
+    class="sise-template"
+    data-kicker="Ruta de aprendizaje"
+    data-title="Ingresa a tus módulos"
+    id="sise-template-modulos">
+
+    <p>
+      Selecciona el módulo que deseas revisar y da clic en el botón
+      correspondiente para iniciar tu recorrido de aprendizaje.
+    </p>
+
+
+    <div class="sise-modules-grid">
+
+      <article class="sise-module-card">
+
+        <div class="sise-module-top">
+          <div class="sise-module-number">1</div>
+          <div class="sise-module-label">Módulo 1</div>
+        </div>
+
+        <h3>
+          Fundamentos de la retroalimentación efectiva
+          y acompañamiento digital
+        </h3>
+
+        <p class="sise-module-help">
+          Da clic para iniciar el módulo.
+        </p>
+
+        <a
+          class="sise-module-btn"
+          href="https://aulad.educad.pe/courses/535/pages/introduccion-al-modulo-1?module_item_id=5921">
+          Iniciar módulo 1&nbsp; →
+        </a>
+
+      </article>
+
+
+      <article class="sise-module-card">
+
+        <div class="sise-module-top">
+          <div class="sise-module-number">2</div>
+          <div class="sise-module-label">Módulo 2</div>
+        </div>
+
+        <h3>
+          Seguimiento académico y retroalimentación continua
+        </h3>
+
+        <p class="sise-module-help">
+          Da clic para iniciar el módulo.
+        </p>
+
+        <a
+          class="sise-module-btn"
+          href="https://aulad.educad.pe/courses/535/pages/introduccion-al-modulo-2?module_item_id=5922">
+          Iniciar módulo 2&nbsp; →
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <div class="sise-syllabus-card">
+
+      <div class="sise-syllabus-info">
+
+        <span class="sise-syllabus-label">
           Documento del curso
         </span>
-<h3>
-          Sílabo
-        </h3>
-<p>
-          Revisa el sílabo para conocer la organización, los aprendizajes
-          y los lineamientos generales del curso.
+
+        <h3>Sílabo</h3>
+
+        <p>
+          Revisa el sílabo para conocer la organización,
+          los aprendizajes y los lineamientos generales del curso.
         </p>
-</div>
-<a class="sise-syllabus-btn" href="https://aulad.educad.pe/courses/535/pages/silabo-del-curso?module_item_id=5646">Ver sílabo  →</a>
-</div>
-</div>
-<!-- =====================================================
-       EVALUACIÓN
+
+      </div>
+
+      <a
+        class="sise-syllabus-btn"
+        href="https://aulad.educad.pe/courses/535/pages/silabo-del-curso?module_item_id=5646">
+        Ver sílabo&nbsp; →
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       EVALUACIÓN ACTUALIZADA
   ====================================================== -->
-<div class="sise-template" data-kicker="Evidencias de aprendizaje" data-title="¿Cómo serás evaluado?" id="sise-template-evaluacion">
-<p>
-      La evaluación combina dos actividades aplicadas, con un peso de 25% cada una,
-      participación y coevaluación entre pares, con un peso de 10%, y un proyecto final
-      integrador, con un peso de 40%.
+
+  <div
+    class="sise-template"
+    data-kicker="Evidencias de aprendizaje"
+    data-title="¿Cómo serás evaluado?"
+    id="sise-template-evaluacion">
+
+    <p>
+      La evaluación del curso considera actividades por módulo para
+      validar conocimientos, con un peso de <strong>25% cada una</strong>;
+      la participación en el foro, con un peso total de
+      <strong>10%</strong>; y una evaluación final mediante
+      <strong>Quizizz</strong>, con un peso de <strong>40%</strong>.
     </p>
-<div class="sise-evaluation-grid">
-<article class="sise-evaluation-card">
-<div class="sise-evaluation-icon">01</div>
-<h3>Actividades de módulos</h3>
-<p>
-          En el Módulo 1 diseñarás un sistema de retroalimentación para un curso real y,
-          en el Módulo 2, un sistema de seguimiento académico. Cada actividad representa
-          el 25% de la evaluación del curso.
+
+
+    <div class="sise-evaluation-grid">
+
+      <!-- TARJETA 1 -->
+
+      <article class="sise-evaluation-card">
+
+        <div class="sise-evaluation-icon">01</div>
+
+        <h3>Actividades por módulo</h3>
+
+        <p>
+          En cada módulo desarrollarás una actividad orientada a
+          <strong>validar los conocimientos alcanzados</strong>.
+          Cada actividad representa el
+          <strong>25% de la nota final</strong>.
         </p>
-</article>
-<article class="sise-evaluation-card sise-coeval-card">
-<div class="sise-evaluation-icon">02</div>
-<h3>Participación y coevaluación</h3>
-<p class="sise-coeval-intro">
-          Participarás en foros, reflexiones y procesos de coevaluación, aportando
-          retroalimentación sustentada en evidencias y criterios de la rúbrica. Peso: 10%.
+
+      </article>
+
+
+      <!-- TARJETA 2 -->
+
+      <article class="sise-evaluation-card">
+
+        <div class="sise-evaluation-icon">02</div>
+
+        <h3>Participación</h3>
+
+        <p>
+          Se considerará tu participación en el
+          <strong>foro del curso</strong>, donde compartirás tus
+          reflexiones y aportes de acuerdo con las indicaciones
+          planteadas. Esta participación representa el
+          <strong>10% de la nota final</strong>.
         </p>
-<div aria-label="Flujo de coevaluación" class="sise-coeval-flow">
-<div class="sise-coeval-step"><strong>01</strong><span>Revisa<br/>evidencias</span></div>
-<div class="sise-coeval-arrow">›</div>
-<div class="sise-coeval-step"><strong>02</strong><span>Aplica<br/>la rúbrica</span></div>
-<div class="sise-coeval-arrow">›</div>
-<div class="sise-coeval-step"><strong>03</strong><span>Retroalimenta</span></div>
-</div>
-<button class="sise-coeval-manual-btn sise-open-coeval" type="button">
-          Manual de coevaluación  →
-        </button>
-</article>
-<article class="sise-evaluation-card">
-<div class="sise-evaluation-icon">03</div>
-<h3>Proyecto final</h3>
-<p>
-          Elaborarás un protocolo integral de retroalimentación inteligente para un curso real,
-          integrando diagnóstico, banco de mensajes, indicadores, alertas, plan de intervención
-          y cronograma de acompañamiento docente. Peso: 40%.
+
+      </article>
+
+
+      <!-- TARJETA 3 -->
+
+      <article class="sise-evaluation-card">
+
+        <div class="sise-evaluation-icon">03</div>
+
+        <h3>Evaluación final</h3>
+
+        <p>
+          Al finalizar el curso realizarás una
+          <strong>evaluación mediante Quizizz</strong> para demostrar
+          los conocimientos desarrollados a lo largo de los módulos.
+          Esta evaluación representa el
+          <strong>40% de la nota final</strong>.
         </p>
-</article>
-</div>
-<div class="sise-pass-card">
-<div class="sise-pass-number">17</div>
-<p>
-        Para aprobar el curso, el participante deberá presentar las evidencias solicitadas y alcanzar una
+
+      </article>
+
+
+      <!-- COEVALUACIÓN PRÁCTICA -->
+
+      <article class="sise-evaluation-card sise-optional-card">
+
+        <div class="sise-evaluation-icon">+</div>
+
+        <div class="sise-optional-content">
+
+          <span class="sise-optional-badge">
+            Opcional · Sin nota
+          </span>
+
+          <h3>
+            Coevaluación práctica
+          </h3>
+
+          <p>
+            Es una <strong>actividad integradora opcional</strong>
+            que podrás ir desarrollando progresivamente en cada módulo.
+            Su propósito es permitirte aplicar e integrar los aprendizajes
+            del curso a medida que avanzas en tu recorrido formativo.
+          </p>
+
+          <div class="sise-optional-actions">
+
+            <span class="sise-optional-note">
+              Actividad formativa · No tiene calificación
+            </span>
+
+            <button
+              class="sise-coeval-manual-btn sise-open-coeval"
+              type="button">
+              Manual de coevaluación&nbsp; →
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div class="sise-pass-card">
+
+      <div class="sise-pass-number">17</div>
+
+      <p>
+        Para aprobar el curso, el participante deberá presentar las
+        evidencias solicitadas y alcanzar una
         <strong>nota mínima de 17</strong>.
       </p>
+
+    </div>
+
+  </div>
+
 </div>
-</div>
-</div>
+
+
 <!-- =========================================================
      MANUAL DE COEVALUACIÓN
 ========================================================= -->
-<div aria-hidden="true" class="sise-coeval-modal" id="sise-coeval-modal">
-<div aria-labelledby="sise-coeval-modal-title" aria-modal="true" class="sise-coeval-modal-panel" role="dialog">
-<div class="sise-coeval-modal-head">
-<button aria-label="Cerrar manual" class="sise-coeval-close" type="button">
+
+<div
+  aria-hidden="true"
+  class="sise-coeval-modal"
+  id="sise-coeval-modal">
+
+  <div
+    aria-labelledby="sise-coeval-modal-title"
+    aria-modal="true"
+    class="sise-coeval-modal-panel"
+    role="dialog">
+
+    <div class="sise-coeval-modal-head">
+
+      <button
+        aria-label="Cerrar manual"
+        class="sise-coeval-close"
+        type="button">
         ×
       </button>
-<small>
+
+      <small>
         Guía rápida · Evaluación entre pares
       </small>
-<h3 id="sise-coeval-modal-title">
+
+      <h3 id="sise-coeval-modal-title">
         Manual de coevaluación
       </h3>
-</div>
-<div class="sise-coeval-modal-body">
-<p class="sise-coeval-modal-intro">La coevaluación consiste en revisar el trabajo de un compañero utilizando los criterios definidos en la rúbrica. La valoración debe sustentarse en las evidencias presentadas y ofrecer una retroalimentación útil y respetuosa.</p>
-<div class="sise-manual-route">
-<div class="sise-manual-step">
-<div class="sise-manual-step-num">
+
+    </div>
+
+
+    <div class="sise-coeval-modal-body">
+
+      <p class="sise-coeval-modal-intro">
+        La coevaluación consiste en revisar el trabajo de un compañero
+        utilizando los criterios definidos en la rúbrica. La valoración
+        debe sustentarse en las evidencias presentadas y ofrecer una
+        retroalimentación útil y respetuosa.
+      </p>
+
+
+      <div class="sise-manual-route">
+
+        <div class="sise-manual-step">
+
+          <div class="sise-manual-step-num">
             01
           </div>
-<div>
-<h4>
-              Lee la rúbrica
-            </h4>
-<p>
+
+          <div>
+            <h4>Lee la rúbrica</h4>
+
+            <p>
               Revisa los criterios, niveles de logro y descriptores antes
               de iniciar la valoración.
             </p>
-</div>
-</div>
-<div class="sise-manual-step">
-<div class="sise-manual-step-num">
+          </div>
+
+        </div>
+
+
+        <div class="sise-manual-step">
+
+          <div class="sise-manual-step-num">
             02
           </div>
-<div>
-<h4>
-              Revisa las evidencias
-            </h4>
-<p>
+
+          <div>
+            <h4>Revisa las evidencias</h4>
+
+            <p>
               Observa el trabajo presentado por tu compañero e identifica
               evidencias relacionadas con cada criterio.
             </p>
-</div>
-</div>
-<div class="sise-manual-step">
-<div class="sise-manual-step-num">
+          </div>
+
+        </div>
+
+
+        <div class="sise-manual-step">
+
+          <div class="sise-manual-step-num">
             03
           </div>
-<div>
-<h4>
-              Aplica la rúbrica
-            </h4>
-<p>
+
+          <div>
+            <h4>Aplica la rúbrica</h4>
+
+            <p>
               Contrasta las evidencias con los descriptores y selecciona
               el nivel de logro correspondiente.
             </p>
-</div>
-</div>
-<div class="sise-manual-step">
-<div class="sise-manual-step-num">
+          </div>
+
+        </div>
+
+
+        <div class="sise-manual-step">
+
+          <div class="sise-manual-step-num">
             04
           </div>
-<div>
-<h4>
-              Brinda retroalimentación
-            </h4>
-<p>
+
+          <div>
+            <h4>Brinda retroalimentación</h4>
+
+            <p>
               Explica brevemente qué observaste, reconoce fortalezas y señala
               una oportunidad concreta de mejora.
             </p>
-</div>
-</div>
-</div>
-<div class="sise-manual-note">
-<strong>Recuerda:</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="sise-manual-note">
+
+        <strong>Recuerda:</strong>
         realiza la valoración utilizando los criterios de la rúbrica
         y sustenta tus comentarios en evidencias del trabajo revisado.
 
       </div>
+
+    </div>
+
+  </div>
+
 </div>
-</div>
-</div>
+
+
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
+
 <script>
 (function(){
 
@@ -1862,4 +2153,5 @@
 
 })();
 </script>
+
 </div>
